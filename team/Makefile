@@ -7,6 +7,9 @@ gen-api-server:
 run-api-server:
 	cd ../webapp/go && ./isuumo
 
+run-ueoai-db:
+	cd ../webapp/go && MYSQL_HOST=202.182.113.88 ./isuumo
+
 nginx: nginx/default.conf
 	sudo systemctl restart nginx
 
